@@ -1,0 +1,23 @@
+{
+  "bracketSpacing": true,
+  "printWidth": 90,
+  "singleQuote": true,
+  "tabWidth": 4,
+  "semi": true,
+  "useTabs": false,
+  "trailingComma": "all",
+  "overrides": [
+    {
+      "files": "*.html",
+      "options": {
+        "tabWidth": 2
+      }
+    },
+    {
+      "files": "*.json",
+      "options": {
+        "tabWidth": 2
+      }
+    }
+  ]
+}

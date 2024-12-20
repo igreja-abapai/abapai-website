@@ -1,0 +1,43 @@
+<nav class="container">
+  <div class="nav-bar-top">
+    <div class="top-content-container">
+      <div class="social-media">
+        <div class="social-icon-container">
+          <fa-icon [icon]="faFacebookF"></fa-icon>
+        </div>
+        <div class="social-icon-container">
+          <fa-icon [icon]="faInstagram"></fa-icon>
+        </div>
+        <div class="social-icon-container">
+          <fa-icon [icon]="faYoutube"></fa-icon>
+        </div>
+      </div>
+      <div class="radio-player-container">
+        <div class="player-main-info">
+          <div class="radio-icon">
+            <fa-icon [icon]="faRadio"></fa-icon>
+          </div>
+          <p class="radio-title">RÁDIO ABAPAI RN</p>
+          <!-- <app-audio-player></app-audio-player> -->
+        </div>
+        <div class="playing-now-container">{{ playingNow }}</div>
+      </div>
+    </div>
+  </div>
+  <div class="main-content">
+    <img class="logo-img" src="assets/abapai_logo.png" />
+    <ul class="menu">
+      <!-- <li class="menu-item" (click)="scrollToSection(messageRef)">Início</li> -->
+      <li class="menu-item">Início</li>
+      <li class="menu-item">Sobre Nós</li>
+      <li class="menu-item">Pregações</li>
+      <li class="menu-item">Oração</li>
+      <li class="menu-item">Programação</li>
+      <li class="menu-item">Doações</li>
+      <li class="menu-item">Seja membro</li>
+      <li class="menu-item">TV Aba Pai</li>
+      <li class="menu-item">Localização</li>
+      <li class="menu-item">Contato</li>
+    </ul>
+  </div>
+</nav>
