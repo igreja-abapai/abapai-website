@@ -1,0 +1,51 @@
+.container {
+    width: 100%;
+    min-height: 417px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .title {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    color: #fbfbfb;
+  }
+
+  .subtitle-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+  }
+
+  .subtitle {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #fbfbfb;
+  }
+
+  button {
+    width: 217px;
+    height: 40px;
+    background: #646FB4;
+    border-radius: 25px;
+    border: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    margin-top: 22px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }

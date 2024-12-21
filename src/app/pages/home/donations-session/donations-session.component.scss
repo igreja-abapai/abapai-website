@@ -1,0 +1,54 @@
+.container {
+    width: 100%;
+    min-height: 417px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    // background: linear-gradient(180deg, rgba(0, 0, 0, 0.142) 0%, rgba(0, 0, 0, 0) 14.58%),
+    //             url('assets/bg_doacoes.png');
+    background-position: center;
+    background-size: cover;
+
+    button {
+      width: 217px;
+      height: 40px;
+      background: #646FB4;
+      border-radius: 25px;
+      border: none;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      color: #FFFFFF;
+      margin-top: 22px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .title {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 34px;
+    color: #fbfbfb;
+  }
+
+  .subtitle-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .subtitle {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #fbfbfb;
+  }

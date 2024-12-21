@@ -1,0 +1,18 @@
+<div class="container" #postsRef>
+  <div class="title-container">
+    <h1 class="title">Ministério Cristão Aba Pai</h1>
+    <div class="subtitle-wrapper">
+      <p class="subtitle">
+        "Porque não recebestes o espírito de escravidão, para outra vez estardes com
+        temor, mas recebestes o espírito de adoção, pelo qual clamamos: Aba, Pai!"
+      </p>
+      <p class="subtitle">Romanos 8:15</p>
+    </div>
+    <div class="images-container">
+      @for (image of images; track image) {
+        <img [src]="image" class="img" />
+      }
+
+    </div>
+  </div>
+</div>

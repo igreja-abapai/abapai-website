@@ -1,0 +1,21 @@
+<div class="container" #messageRef>
+  <div class="left-content">
+    <h1 class="title">Mensagem da semana</h1>
+    <p class="video-title">
+      A visão de quem quer milagre • Pr. Raimundo Feliciano
+    </p>
+    <button class="explore-button">Ver mais pregações</button>
+  </div>
+
+  <div class="right-content">
+    <div class="video-container">
+      <img [src]="videoThumbnail" class="video-cover" alt="Video thumbnail"/>
+      <a [href]="videoUrl" target="_blank" rel="noopener noreferrer">
+        <div class="player-div">
+          <img [src]="playerImageSrc" alt="Play button"/>
+        </div>
+      </a>
+    </div>
+    <p class="video-info">MINISTÉRIO CRISTÃO ABA PAI | 21 JUL 2022</p>
+  </div>
+</div>
