@@ -1,0 +1,44 @@
+<div class="radio-player-container">
+  <div class="player-main-info">
+    <div class="radio-icon">
+      <fa-icon [icon]="faRadio"></fa-icon>
+    </div>
+    <p class="radio-title">RÁDIO ABAPAI RN</p>
+    <div class="player-controls">
+      <audio #audioPlayer preload="none">
+        <source src="https://hts01.brascast.com:12044/live" />
+        Your browser does not support the audio tag.
+      </audio>
+
+      <div class="play-back-button">
+        <fa-icon [icon]="faBackwardStep"></fa-icon>
+      </div>
+
+      <div class="play-pause-button" (click)="toggleAudio()">
+        @if (isPlaying) {
+          <fa-icon [icon]="faPause"></fa-icon>
+        } @else {
+          <fa-icon [icon]="faPlay"></fa-icon>
+        }
+      </div>
+
+      <div class="play-forward-button">
+        <fa-icon [icon]="faForwardStep"></fa-icon>
+      </div>
+
+      <div class="volume-slider">
+        <input
+          type="range"
+          min="0"
+          max="100"
+          [value]="volume"
+          (input)="handleVolumeChange($event)"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="playing-now-container">
+    <div class="scrolling-text">{{ playingNow }}</div>
+  </div>
+</div>
+

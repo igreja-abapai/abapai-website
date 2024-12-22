@@ -1,4 +1,4 @@
-.container {
+.content-container {
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -33,59 +33,6 @@
     display: flex;
     align-items: center;
     gap: 3px;
-}
-
-.radio-player-container {
-    display: flex;
-    flex-direction: column;
-    width: 350px;
-    position: relative;
-}
-
-.player-main-info {
-    display: flex;
-    align-items: center;
-}
-
-.playing-now-container {
-    display: flex;
-    color: white;
-    font-size: 14px;
-    width: 350px;
-    overflow: hidden;
-    position: absolute;
-    bottom: -17px;
-}
-
-.scrolling-text {
-    white-space: nowrap;
-    animation: scrollText 15s linear infinite;
-    will-change: transform; // Optimizes animation performance
-    -webkit-font-smoothing: antialiased; // Smoother text rendering
-}
-
-@keyframes scrollText {
-    0% {
-        transform: translateX(300%);
-    }
-
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-.radio-title {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    color: #ffffff;
-}
-
-.radio-icon {
-    margin-right: 10px;
-    color: #fff;
-    font-size: 24px;
 }
 
 .social-media {

@@ -1,4 +1,4 @@
-<nav class="container">
+<nav class="content-container">
   <div class="nav-bar-top">
     <div class="top-content-container">
       <div class="social-media">
@@ -12,18 +12,7 @@
           <fa-icon [icon]="faYoutube"></fa-icon>
         </div>
       </div>
-      <div class="radio-player-container">
-        <div class="player-main-info">
-          <div class="radio-icon">
-            <fa-icon [icon]="faRadio"></fa-icon>
-          </div>
-          <p class="radio-title">RÁDIO ABAPAI RN</p>
-          <app-audio-player></app-audio-player>
-        </div>
-        <div class="playing-now-container">
-          <div class="scrolling-text">{{ playingNow }}</div>
-        </div>
-      </div>
+      <app-radio-audio-player />
     </div>
   </div>
   <div class="main-content">

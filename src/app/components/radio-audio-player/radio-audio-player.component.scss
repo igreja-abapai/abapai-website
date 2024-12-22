@@ -1,0 +1,100 @@
+.player-controls {
+    width: 180px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.radio-player-container {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    position: relative;
+}
+
+.player-main-info {
+    display: flex;
+    align-items: center;
+}
+
+.playing-now-container {
+    display: flex;
+    color: white;
+    font-size: 14px;
+    width: 350px;
+    overflow: hidden;
+    position: absolute;
+    bottom: -17px;
+}
+
+.scrolling-text {
+    white-space: nowrap;
+    animation: scrollText 15s linear infinite;
+    will-change: transform; // Optimizes animation performance
+    -webkit-font-smoothing: antialiased; // Smoother text rendering
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(300%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.radio-title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    color: #ffffff;
+}
+
+.radio-icon {
+    margin-right: 10px;
+    color: #fff;
+    font-size: 24px;
+}
+
+.play-pause-button {
+    font-size: 17px;
+    color: #fff;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.play-back-button {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.play-forward-button {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.volume-slider {
+    input[type='range'] {
+        width: 50px;
+        height: 5px;
+        border-radius: 5px;
+        background: #fff;
+        outline: none;
+        -webkit-appearance: none;
+
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #4157e7;
+            cursor: pointer;
+        }
+    }
+}
