@@ -65,17 +65,18 @@
 }
 
 .menu {
+    min-width: 750px;
     max-width: 1500px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    gap: 38px;
+    gap: 45px;
 }
 
 .menu-item {
     font-family: 'Inter';
     font-weight: 500;
-    font-size: 13px;
+    font-size: 14px;
     color: #ffffff;
     white-space: nowrap;
 
