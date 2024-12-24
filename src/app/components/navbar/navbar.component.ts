@@ -1,18 +1,16 @@
-import { Component, inject, PLATFORM_ID } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { RadioAudioPlayerComponent } from '../radio-audio-player/radio-audio-player.component';
 import { faFacebookF, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
-import { ElementRef } from '@angular/core';
-import { RadioAudioPlayerComponent } from '../components/radio-audio-player/radio-audio-player.component';
-import { Subscription } from 'rxjs';
 
 @Component({
-    selector: 'app-layout',
+    selector: 'app-navbar',
     standalone: true,
     imports: [FontAwesomeModule, RadioAudioPlayerComponent],
-    templateUrl: './layout.component.html',
-    styleUrl: './layout.component.scss',
+    templateUrl: './navbar.component.html',
+    styleUrl: './navbar.component.scss',
 })
-export class LayoutComponent {
+export class NavbarComponent {
     faFacebookF = faFacebookF;
     faInstagram = faInstagram;
     faYoutube = faYoutube;

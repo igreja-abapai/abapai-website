@@ -34,6 +34,10 @@ module.exports = {
                     900: '#444a6b',
                     950: '#282b3e',
                 },
+                tertiary: {
+                    100: '#636363',
+                    200: '#262425'
+                },
                 error: {
                     50: '#fff3f1',
                     100: '#ffe3df',
@@ -94,7 +98,7 @@ module.exports = {
                 dark: '#3c3c3b',
             },
             fontFamily: {
-                sans: ['Inter Variable', 'Roboto', 'sans-serif'],
+                sans: ['Inter', 'sans-serif'],
                 roboto: ['Roboto', 'sans-serif'],
             },
         },

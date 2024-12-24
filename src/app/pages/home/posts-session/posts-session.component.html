@@ -1,4 +1,4 @@
-<div class="content-container" #postsRef>
+<div class="content-container py-[110px]" #postsRef>
   <div class="title-container">
     <h1 class="title">Ministério Cristão Aba Pai</h1>
     <div class="subtitle-wrapper">
@@ -8,11 +8,10 @@
       </p>
       <p class="subtitle">Romanos 8:15</p>
     </div>
-    <div class="images-container">
-      @for (image of images; track image) {
-        <img [src]="image" class="img" />
-      }
-
-    </div>
+  </div>
+  <div class="images-container">
+    @for (image of images; track image) {
+      <img [src]="image" class="img" />
+    }
   </div>
 </div>
