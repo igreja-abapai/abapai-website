@@ -1,9 +1,23 @@
-<div class="content-container" #appDownloadRef style="background: url('assets/bg_app_abapai.jpg'); background-size: cover; background-position: center;">
+<div
+  class="content-container"
+  #appDownloadRef
+  style="
+    background: url('assets/bg_app_abapai.jpg');
+    background-size: cover;
+    background-position: center;
+  "
+>
   <div class="content-div">
     <h1 class="title">BAIXE O APLICATIVO DA RÁDIO ABA PAI</h1>
-    <p class="subtitle">Ouça a nossa rádio no celular ou tablet quando e onde você quiser!</p>
+    <p class="subtitle">
+      Ouça a nossa rádio no celular ou tablet quando e onde você quiser!
+    </p>
     <div class="download-images">
-      <img [src]="androidImage" alt="android-download" />
+      <a
+        href="https://play.google.com/store/apps/details?id=br.com.radiosapp5.rdioabapairn&hl=pt_BR"
+        target="_blank"
+        ><img [src]="androidImage" alt="android-download"
+      /></a>
       <img [src]="iosImage" alt="ios-download" />
     </div>
   </div>

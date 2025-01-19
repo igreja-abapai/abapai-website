@@ -8,4 +8,11 @@ export const routes: Routes = [
                 (mod) => mod.HomePageComponent,
             ),
     },
+    {
+        path: 'ofertas',
+        loadComponent: () =>
+            import('./pages/donations/donations-page.component').then(
+                (mod) => mod.DonationsPageComponent,
+            ),
+    },
 ];
