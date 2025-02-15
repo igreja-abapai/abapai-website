@@ -11,6 +11,8 @@ import { faFacebookF, faInstagram, faYoutube } from '@fortawesome/free-brands-sv
 })
 export class FooterComponent {
     faFacebookF = faFacebookF;
+
     faInstagram = faInstagram;
+
     faYoutube = faYoutube;
 }

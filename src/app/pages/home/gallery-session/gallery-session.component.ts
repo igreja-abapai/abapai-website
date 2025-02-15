@@ -1,14 +1,14 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
-    selector: 'app-posts-session',
+    selector: 'app-gallery-session',
     standalone: true,
     imports: [],
-    templateUrl: './posts-session.component.html',
-    styleUrls: ['./posts-session.component.scss'],
+    templateUrl: './gallery-session.component.html',
+    styleUrls: ['./gallery-session.component.scss'],
 })
-export class PostsSessionComponent {
-    @ViewChild('postsRef') postsRef!: ElementRef;
+export class GallerySessionComponent {
+    @ViewChild('galleryRef') galleryRef!: ElementRef;
 
     images = [
         '../assets/igreja1.jpg',

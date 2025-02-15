@@ -1,8 +1,8 @@
-import { Component, ElementRef } from '@angular/core';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { RadioAudioPlayerComponent } from '../radio-audio-player/radio-audio-player.component';
-import { faFacebookF, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faFacebookF, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { RadioAudioPlayerComponent } from '../radio-audio-player/radio-audio-player.component';
 
 @Component({
     selector: 'app-navbar',
@@ -13,12 +13,14 @@ import { RouterModule } from '@angular/router';
 })
 export class NavbarComponent {
     faFacebookF = faFacebookF;
+
     faInstagram = faInstagram;
+
     faYoutube = faYoutube;
 
     constructor() {}
 
-    scrollToSection(ref: ElementRef): void {
-        // Implement scrolling logic
-    }
+    // scrollToSection(ref: ElementRef): void {
+    //     // Implement scrolling logic
+    // }
 }

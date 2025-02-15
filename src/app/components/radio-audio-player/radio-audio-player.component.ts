@@ -4,16 +4,15 @@ import {
     ElementRef,
     inject,
     OnDestroy,
-    OnInit,
     PLATFORM_ID,
     ViewChild,
 } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
-    faPlay,
     faBackwardStep,
     faForwardStep,
     faPause,
+    faPlay,
     faRadio,
 } from '@fortawesome/free-solid-svg-icons';
 import { interval, Subscription } from 'rxjs';
@@ -31,14 +30,21 @@ export class RadioAudioPlayerComponent implements OnDestroy {
     private platformId = inject(PLATFORM_ID);
 
     faPlay = faPlay;
+
     faBackwardStep = faBackwardStep;
+
     faForwardStep = faForwardStep;
+
     faPause = faPause;
+
     faRadio = faRadio;
 
     isPlaying = false;
+
     volume = 100;
+
     playingNow = '';
+
     private updateSubscription?: Subscription;
 
     ngOnDestroy(): void {
@@ -66,6 +72,7 @@ export class RadioAudioPlayerComponent implements OnDestroy {
         fetch('https://websitenoar.net/last/cur.php?hts=hts01&porta=12044')
             .then((response) => response.text())
             .then((data) => (this.playingNow = data.split('||IMAGE||')[0]))
+            // eslint-disable-next-line no-console
             .catch((error) => console.error('Error:', error));
     }
 

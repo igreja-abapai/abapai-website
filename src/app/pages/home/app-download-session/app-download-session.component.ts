@@ -11,5 +11,6 @@ export class AppDownloadSessionComponent {
     @Input() appDownloadRef!: ElementRef;
 
     androidImage = 'assets/download-android.png';
+
     iosImage = 'assets/download-ios.png';
 }
