@@ -1,5 +1,5 @@
 <div
-  class="content-container"
+  class="content-container w-full md:min-h-[545px]"
   #appDownloadRef
   style="
     background: url('assets/bg_app_abapai.jpg');
@@ -8,8 +8,8 @@
   "
 >
   <div class="content-div">
-    <h1 class="title">BAIXE O APLICATIVO DA RÁDIO ABA PAI</h1>
-    <p class="subtitle">
+    <h1 class="title md:w-[648px] md:h-[120px] text-[36px] md:text-[60px]">BAIXE O APLICATIVO DA RÁDIO ABA PAI</h1>
+    <p class="subtitle md:w-[400px] h-[58px]">
       Ouça a nossa rádio no celular ou tablet quando e onde você quiser!
     </p>
     <div class="download-images">
@@ -18,7 +18,7 @@
         target="_blank"
         ><img [src]="androidImage" alt="android-download"
       /></a>
-      <img [src]="iosImage" alt="ios-download" />
+      <a href="#"><img [src]="iosImage" alt="ios-download" /></a>
     </div>
   </div>
 </div>

@@ -15,9 +15,67 @@
       <app-radio-audio-player />
     </div>
   </div>
-  <div class="main-content">
-    <img class="logo-img" src="assets/abapai_logo.png" />
-    <ul class="menu">
+  <div class="main-content px-5 lg:px-[80px]">
+    <img class="w-[65px] h-[58px] lg:w-[80px] lg:h-[72px]" src="assets/abapai_logo.png" />
+    <button
+      (click)="toggleMenu()"
+      class="p-1.5 bg-transparent hover:bg-transparent text-white md:hidden relative"
+    >
+      <!-- close svg -->
+      @if (menuExpanded) {
+        <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+          <path
+            class="hidden"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
+          <path
+            class="inline-flex"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          ></path>
+        </svg>
+
+        <div class="absolute top-0 right-10 bg-[#262425]">
+          <ul class="px-3 py-5 flex flex-col items-center gap-4">
+            <!-- <li class="menu-item text-lg" (click)="scrollToSection(messageRef)">Início</li> -->
+            <li class="menu-item text-lg hover:opacity-[0.8]"><a routerLink="/">Início</a></li>
+            <li class="menu-item text-lg hover:opacity-[0.8]">Sobre Nós</li>
+            <li class="menu-item text-lg hover:opacity-[0.8]">Pregações</li>
+            <li class="menu-item text-lg hover:opacity-[0.8]">Oração</li>
+            <li class="menu-item text-lg hover:opacity-[0.8]">Programação</li>
+            <li class="menu-item text-lg hover:opacity-[0.8]"><a routerLink="/ofertas">Doações</a></li>
+            <!-- <li class="menu-item text-lg">Seja membro</li> -->
+            <!-- <li class="menu-item text-lg">TV Aba Pai</li> -->
+            <!-- <li class="menu-item text-lg">Localização</li> -->
+            <li class="menu-item hover:opacity-[0.8]">Contato</li>
+          </ul>
+        </div>
+      } @else {
+        <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+          <path
+            class="inline-flex"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
+          <path
+            class="hidden"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          ></path>
+        </svg>
+      }
+    </button>
+
+    <ul class="hidden lg:min-w-[750px] max-w-[1500px] md:flex justify-between items-center gap-8 lg:gap-[45px]">
       <!-- <li class="menu-item" (click)="scrollToSection(messageRef)">Início</li> -->
       <li class="menu-item hover:opacity-[0.8]"><a routerLink="/">Início</a></li>
       <li class="menu-item hover:opacity-[0.8]">Sobre Nós</li>

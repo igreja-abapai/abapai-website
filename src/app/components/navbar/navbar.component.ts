@@ -12,6 +12,8 @@ import { RadioAudioPlayerComponent } from '../radio-audio-player/radio-audio-pla
     styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
+    menuExpanded = false;
+
     faFacebookF = faFacebookF;
 
     faInstagram = faInstagram;
@@ -23,4 +25,8 @@ export class NavbarComponent {
     // scrollToSection(ref: ElementRef): void {
     //     // Implement scrolling logic
     // }
+
+    toggleMenu() {
+        this.menuExpanded = !this.menuExpanded;
+    }
 }
