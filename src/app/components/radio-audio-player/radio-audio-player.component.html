@@ -1,10 +1,10 @@
 <div class="radio-player-container">
   <div class="player-main-info">
-    <div class="radio-icon">
+    <div class="radio-icon text-xl sm:text-[24px]">
       <fa-icon [icon]="faRadio"></fa-icon>
     </div>
-    <p class="radio-title">RÁDIO ABAPAI RN</p>
-    <div class="player-controls">
+    <p class="radio-title mr-3 sm:mr-0">RÁDIO ABAPAI RN</p>
+    <div class="sm:w-[180px] h-[24px] flex justify-end sm:justify-center items-center gap-4">
       <audio #audioPlayer preload="none">
         <source src="https://hts01.brascast.com:12044/live" />
         Your browser does not support the audio tag.
@@ -26,7 +26,7 @@
         <fa-icon [icon]="faForwardStep"></fa-icon>
       </div>
 
-      <div class="volume-slider">
+      <div class="volume-slider flex">
         <input
           type="range"
           min="0"
@@ -37,7 +37,7 @@
       </div>
     </div>
   </div>
-  <div class="playing-now-container">
+  <div class="playing-now-container text-xs sm:text-sm">
     <div class="scrolling-text">{{ playingNow }}</div>
   </div>
 </div>

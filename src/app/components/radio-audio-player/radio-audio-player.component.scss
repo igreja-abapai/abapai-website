@@ -1,12 +1,3 @@
-.player-controls {
-    width: 180px;
-    height: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-}
-
 .radio-player-container {
     display: flex;
     flex-direction: column;
@@ -16,13 +7,13 @@
 
 .player-main-info {
     display: flex;
+    justify-content: end;
     align-items: center;
 }
 
 .playing-now-container {
     display: flex;
     color: white;
-    font-size: 14px;
     font-family: 'Times New Roman', Times, serif;
     width: 350px;
     overflow: hidden;
@@ -58,7 +49,6 @@
 .radio-icon {
     margin-right: 10px;
     color: #fff;
-    font-size: 24px;
 }
 
 .play-pause-button {
