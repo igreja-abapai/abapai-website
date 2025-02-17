@@ -1,39 +1,38 @@
-<div class="w-full min-h-[380px] flex flex-col md:flex-row justify-center items-center gap-5 md:gap-[114px] p-8 bg-gray-100">
+<div
+  class="w-full min-h-[380px] flex flex-col md:flex-row justify-center items-center gap-5 md:gap-[114px] p-8 bg-gray-100"
+>
   <div class="flex flex-col justify-center">
-    <h1 class="font-inter font-bold text-3xl text-black mb-3">
-      Mensagem da semana
-    </h1>
+    <h1 class="font-inter font-bold text-3xl text-black mb-3">Mensagem da semana</h1>
     <p class="font-inter font-light text-[17px] text-black mb-5">
       A visão de quem quer milagre - Pr. Raimundo Feliciano
     </p>
-    <a href="https://www.youtube.com/@MINIST%C3%89RIOCRIST%C3%83OABAPAI/videos" target="_blank">
-      <button class="w-[210px] h-8 bg-[#262425] rounded px-4 py-1 font-inter font-normal text-sm text-white hover:cursor-pointer">
+    <a href="https://www.youtube.com/@MINISTÉRIOCRISTÃOABAPAI/videos" target="_blank">
+      <button
+        class="w-[210px] h-8 bg-[#262425] rounded px-4 py-1 font-inter font-normal text-sm text-white hover:cursor-pointer transition duration-300 hover:scale-105 hover:shadow-lg"
+      >
         Ver mais pregações
       </button>
     </a>
   </div>
 
-  <div class="w-[90vw] md:w-[385px] h-[250px] flex flex-col items-center gap-3">
-    <div class="w-[90vw] md:w-[385px] h-[225px] relative">
-      <img
-        [src]="videoThumbnail"
-        class="w-full h-full"
-        alt="Video thumbnail"
-      />
-      <a
-        [href]="videoUrl"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="absolute inset-0"
-      >
-        <div class="w-full h-full flex justify-center items-center bg-black/25">
-          <img
-            [src]="playerImageSrc"
-            class="w-[195px]"
-            alt="Play button"
-          />
-        </div>
-      </a>
+  <div class="w-[90vw] md:w-[430px] flex flex-col items-center gap-3">
+    <div class="w-[90vw] md:w-[430px] aspect-video relative" (click)="playVideo()">
+      <!-- <ng-container>
+          <img [src]="videoThumbnail" class="w-full h-full" alt="Video thumbnail" />
+          <div (click)="playVideo()" class="absolute inset-0 cursor-pointer">
+            <div class="w-full h-full flex justify-center items-center bg-black/25">
+              <img [src]="playerImageSrc" class="w-[195px]" alt="Play button" />
+            </div>
+          </div>
+        </ng-container> -->
+
+      <iframe
+        [src]="safeVideoUrl"
+        class="w-full h-full rounded-xl"
+        frameborder="0"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
     </div>
     <p class="font-inter font-medium text-xs text-black">
       MINISTÉRIO CRISTÃO ABA PAI | 21 JUL 2022

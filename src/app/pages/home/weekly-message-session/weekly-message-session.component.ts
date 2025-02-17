@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
     selector: 'app-weekly-message',
@@ -13,5 +14,17 @@ export class WeeklyMessageComponent {
     videoThumbnail = 'https://img.youtube.com/vi/wjleWU8J2GY/maxresdefault.jpg';
 
     videoUrl =
-        'https://www.youtube.com/embed/wjleWU8J2GY?autoplay=1&rel=0&fs=1&modestbranding=1';
+        'https://www.youtube.com/embed/wjleWU8J2GY?autoplay=0&rel=0&fs=1&modestbranding=1';
+
+    isPlaying = false;
+
+    safeVideoUrl: any;
+
+    constructor(private sanitizer: DomSanitizer) {
+        this.safeVideoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.videoUrl);
+    }
+
+    playVideo() {
+        this.isPlaying = true;
+    }
 }
