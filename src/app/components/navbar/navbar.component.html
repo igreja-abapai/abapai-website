@@ -85,7 +85,12 @@
             <!-- <li class="menu-item text-lg">Seja membro</li> -->
             <!-- <li class="menu-item text-lg">TV Aba Pai</li> -->
             <!-- <li class="menu-item text-lg">Localização</li> -->
-            <li class="menu-item text-lg hover:opacity-[0.8]">Contato</li>
+            <li
+              class="menu-item text-lg hover:opacity-[0.8]"
+              (click)="scrollToElement('footer')"
+            >
+              Contato
+            </li>
           </ul>
         </div>
       } @else {
@@ -127,7 +132,9 @@
       <!-- <li class="menu-item">Seja membro</li> -->
       <!-- <li class="menu-item">TV Aba Pai</li> -->
       <!-- <li class="menu-item">Localização</li> -->
-      <li class="menu-item hover:opacity-[0.8]">Contato</li>
+      <li class="menu-item hover:opacity-[0.8]" (click)="scrollToElement('footer')">
+        Contato
+      </li>
     </ul>
   </div>
 </nav>
