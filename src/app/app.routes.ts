@@ -15,4 +15,11 @@ export const routes: Routes = [
                 (mod) => mod.DonationsPageComponent,
             ),
     },
+    {
+        path: 'programacao',
+        loadComponent: () =>
+            import('./pages/schedule/schedule-page.component').then(
+                (mod) => mod.SchedulePageComponent,
+            ),
+    },
 ];
