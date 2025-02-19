@@ -5,6 +5,7 @@ import { WeeklyMessageComponent } from './weekly-message-session/weekly-message-
 import { DonationsSessionComponent } from './donations-session/donations-session.component';
 import { AppDownloadSessionComponent } from './app-download-session/app-download-session.component';
 import { GallerySessionComponent } from './gallery-session/gallery-session.component';
+import { WhatsAppButtonComponent } from './whatsapp-button/whatsapp-button.component';
 
 @Component({
     selector: 'app-home-page',
@@ -16,6 +17,7 @@ import { GallerySessionComponent } from './gallery-session/gallery-session.compo
         GallerySessionComponent,
         DonationsSessionComponent,
         AppDownloadSessionComponent,
+        WhatsAppButtonComponent,
     ],
     templateUrl: './home-page.component.html',
     styleUrl: './home-page.component.scss',
