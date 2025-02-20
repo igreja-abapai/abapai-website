@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faFacebookF, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faInstagram, faYoutube, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
     selector: 'app-footer',
@@ -16,4 +16,6 @@ export class FooterComponent {
     faInstagram = faInstagram;
 
     faYoutube = faYoutube;
+
+    faXTwitter = faXTwitter;
 }

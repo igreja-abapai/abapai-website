@@ -1,7 +1,7 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faFacebookF, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faInstagram, faXTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { FooterComponent } from '../footer/footer.component';
 import { RadioAudioPlayerComponent } from '../radio-audio-player/radio-audio-player.component';
 
@@ -22,6 +22,8 @@ export class NavbarComponent {
     faInstagram = faInstagram;
 
     faYoutube = faYoutube;
+
+    faXTwitter = faXTwitter;
 
     constructor() {}
 

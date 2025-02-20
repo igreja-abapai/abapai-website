@@ -6,20 +6,32 @@
         <p class="hover:opacity-80 hover:cursor-pointer">QUEM SOMOS</p>
         <p class="hover:opacity-80 hover:cursor-pointer">EM QUE CREMOS</p>
         <p class="hover:opacity-80 hover:cursor-pointer">HISTÓRIA</p>
-        <a routerLink="/programacao" class="hover:opacity-80 hover:cursor-pointer">PROGRAMAÇÃO</a>
+        <a routerLink="/programacao" class="hover:opacity-80 hover:cursor-pointer"
+          >PROGRAMAÇÃO</a
+        >
       </div>
 
       <div class="hidden md:flex flex-col gap-2.5 text-sm">
         <h2 class="font-bold text-white mb-2 text-base">MÍDIA</h2>
-        <p class="hover:opacity-80 hover:cursor-pointer">PREGAÇÕES</p>
-        <p class="hover:opacity-80 hover:cursor-pointer">WEB-RÁDIO ABAPAI RN</p>
-        <p class="hover:opacity-80 hover:cursor-pointer">TV ABAPAI RN</p>
-        <p class="hover:opacity-80 hover:cursor-pointer">CULTOS GRAVADOS</p>
+        <a
+          href="https://www.youtube.com/@MINIST%C3%89RIOCRIST%C3%83OABAPAI/videos"
+          target="_blank"
+          class="hover:opacity-80 hover:cursor-pointer"
+          >PREGAÇÕES</a
+        >
+        <a
+          href="https://play.google.com/store/apps/details?id=br.com.radiosapp5.rdioabapairn&hl=pt_BR"
+          target="_blank"
+          class="hover:opacity-80 hover:cursor-pointer"
+          >WEB-RÁDIO ABAPAI RN</a
+        >
+        <a href="https://www.youtube.com/@tvabapairn" target="_blank" class="hover:opacity-80 hover:cursor-pointer">TV ABAPAI RN</a>
+        <a href="https://www.youtube.com/@MINIST%C3%89RIOCRIST%C3%83OABAPAI/streams" target="_blank" class="hover:opacity-80 hover:cursor-pointer">CULTOS GRAVADOS</a>
       </div>
 
       <div class="hidden md:flex flex-col gap-2.5 text-sm">
         <h2 class="font-bold text-white mb-2 text-base">MAIS</h2>
-        <p class="hover:opacity-80 hover:cursor-pointer">DOAÇÕES</p>
+        <a routerLink="/ofertas" class="hover:opacity-80 hover:cursor-pointer">DOAÇÕES</a>
         <p class="hover:opacity-80 hover:cursor-pointer">PEDIDOS DE ORAÇÃO</p>
         <p class="hover:opacity-80 hover:cursor-pointer">FALE CONOSCO</p>
       </div>
@@ -46,6 +58,12 @@
             target="_blank"
           >
             <fa-icon [icon]="faYoutube"></fa-icon>
+          </a>
+          <a
+            class="w-[32px] h-[32px] flex justify-center items-center bg-white rounded-2xl text-[#262425] text-lg hover:cursor-pointer transition duration-300 hover:scale-110"
+            href="#"
+          >
+            <fa-icon [icon]="faXTwitter"></fa-icon>
           </a>
         </div>
 
