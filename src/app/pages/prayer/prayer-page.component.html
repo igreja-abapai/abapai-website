@@ -1,0 +1,37 @@
+<div class="min-h-[calc(100vh-480px)] flex flex-col items-center">
+  <div
+    class="top-container w-full h-[160px] md:h-[230px] flex justify-center items-center"
+    #donationsRef
+    style="
+      background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.142) 0%,
+          rgba(0, 0, 0, 0) 14.58%
+        ),
+        url('assets/bg_intercessao.jpg');
+      background-size: cover;
+      background-position: center;
+    "
+  >
+    <h1 class="text-white font-bold text-3xl md:text-5xl">PEDIDOS DE ORAÇÃO</h1>
+  </div>
+  <div class="w-[90%] md:w-[60%] max-w-[1000px] md:min-h-[500px] flex flex-col items-center py-10 md:py-20">
+    <h1 class="text-center text-xl mb-4 font-bold">Queremos orar por você! Faça seu pedido.</h1>
+    <p class="text-sm mb-6">"E esta é a confiança que temos nele: que, se pedirmos alguma coisa, segundo a sua vontade, ele nos ouve." 1 João 5:14</p>
+    <form class="w-full md:w-[70%] p-0 md:p-5 flex flex-col gap-5 w-full items-center" action="#">
+      <div class="w-full">
+        <input class="w-full border border-black h-[50px] rounded-lg pl-3 placeholder-black text-[14px]" type="text" name="name" placeholder="Seu nome">
+      </div>
+      <div class="w-full">
+        <input class="w-full border border-black h-[50px] rounded-lg pl-3 placeholder-black text-[14px]" type="tel" name="phone" placeholder="Seu telefone">
+      </div>
+      <div class="w-full">
+        <input class="w-full border border-black h-[50px] rounded-lg pl-3 placeholder-black text-[14px]" type="text" name="area" placeholder="Área (Família, Saúde, Vida Espiritual, Trabalho ou Outros) *">
+      </div>
+      <div class="w-full">
+        <textarea class="w-full border border-black rounded-lg p-3 placeholder-black text-[14px]" type="text" name="prayer" rows="5" placeholder="Seu pedido de oração *"></textarea>
+      </div>
+      <button class="rounded-lg w-full md:w-[250px] h-[50px] hover:opacity-95" type="submit">Enviar</button>
+    </form>
+  </div>
+</div>

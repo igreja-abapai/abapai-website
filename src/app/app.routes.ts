@@ -22,4 +22,11 @@ export const routes: Routes = [
                 (mod) => mod.SchedulePageComponent,
             ),
     },
+    {
+        path: 'pedido-de-oracao',
+        loadComponent: () =>
+            import('./pages/prayer/prayer-page.component').then(
+                (mod) => mod.PrayerPageComponent,
+            ),
+    },
 ];
