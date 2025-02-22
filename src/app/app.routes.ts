@@ -29,4 +29,11 @@ export const routes: Routes = [
                 (mod) => mod.PrayerPageComponent,
             ),
     },
+    {
+        path: 'sobre-nos',
+        loadComponent: () =>
+            import('./pages/about/about-page.component').then(
+                (mod) => mod.AboutPageComponent,
+            ),
+    },
 ];

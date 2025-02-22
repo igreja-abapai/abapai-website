@@ -11,7 +11,7 @@ export class GallerySessionComponent {
     @ViewChild('galleryRef') galleryRef!: ElementRef;
 
     images = [
-        '../assets/igreja1.jpg',
+        '../assets/igreja9.jpg',
         '../assets/igreja2.jpg',
         '../assets/igreja3.jpg',
         '../assets/igreja4.jpg',
