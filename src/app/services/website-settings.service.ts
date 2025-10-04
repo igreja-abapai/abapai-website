@@ -29,7 +29,7 @@ export interface WebsiteSettings {
 })
 export class WebsiteSettingsService {
     private http = inject(HttpClient);
-
+    
     private apiUrl = environment.clientApiBaseUrl;
 
     getSettings(): Observable<WebsiteSettings> {

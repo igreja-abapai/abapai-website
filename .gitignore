@@ -40,13 +40,3 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
-
-# Environment variables
-.env
-.env.local
-.env.*.local
-.env.production
-
-# Generated environment files
-src/app/shared/environments/environment.development.ts
-src/app/shared/environments/environment.production.ts

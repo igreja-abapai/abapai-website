@@ -3,12 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "prebuild": "node scripts/generate-env.mjs",
-    "start": "npm run prebuild && npx ng serve",
-    "build": "npx ng build",
-    "build:dev": "npx ng build --configuration development",
-    "watch": "npx ng build --watch --configuration development",
-    "test": "npx ng test",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
     "serve:ssr:abapai-website": "node dist/abapai-website/server/server.mjs",
     "lint": "eslint \"{src,}/**/*.ts\" --fix"
   },

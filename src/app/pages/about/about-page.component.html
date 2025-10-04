@@ -20,6 +20,7 @@
       <img class="w-full" src="assets/montagem_about.jpg" />
     </div>
 
+    <!-- Loading State -->
     <div *ngIf="loading" class="text-center py-8">
       <div
         class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"
@@ -27,6 +28,7 @@
       <p class="text-gray-500">Carregando conteúdo...</p>
     </div>
 
+    <!-- Error State -->
     <div
       *ngIf="error"
       class="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg mb-6"
