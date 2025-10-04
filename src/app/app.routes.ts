@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { websiteSettingsResolver } from './resolvers/website-settings.resolver';
 
 export const routes: Routes = [
     {
@@ -35,5 +36,8 @@ export const routes: Routes = [
             import('./pages/about/about-page.component').then(
                 (mod) => mod.AboutPageComponent,
             ),
+        resolve: {
+            websiteSettings: websiteSettingsResolver,
+        },
     },
 ];

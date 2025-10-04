@@ -19,81 +19,41 @@
     <div class="md:hidden mb-10">
       <img class="w-full" src="assets/montagem_about.jpg" />
     </div>
-    <h2 class="font-semibold text-[28px] mb-4">Quem Somos</h2>
-    <div class="w-full flex flex-col md:flex-row gap-[60px]">
-      <div class="md:w-[50%] flex flex-col gap-3 text-justify leading-8">
-        <p>
-          A Igreja Apostólica Ministério Cristão Aba Pai, localizada no Rio Grande do
-          Norte (RN), foi fundada em 2004 a partir do chamado de Deus na vida do Pastor
-          Raimundo Feliciano. Somos uma igreja comprometida em compartilhar o amor de Deus
-          e viver conforme os ensinamentos de Jesus Cristo. Mais do que um local de culto,
-          somos uma família unida pela fé, acolhendo todas as pessoas que desejam conhecer
-          mais sobre Deus e experimentar Sua graça transformadora.
-        </p>
-        <p>
-          Nosso desejo é ser uma igreja viva, que exalte o nome do Senhor em todas as
-          áreas da vida, promovendo a comunhão entre os irmãos e fortalecendo a caminhada
-          cristã de cada membro. Buscamos crescer juntos no conhecimento da Palavra, no
-          amor ao próximo e no serviço ao Reino, confiantes de que Deus nos chamou para
-          sermos luz neste mundo.
-        </p>
-        <p>
-          Acreditamos que cada pessoa tem um propósito em Cristo e que, por meio da fé, do
-          discipulado e da oração, podemos viver uma vida plena e abundante conforme os
-          planos de Deus. Nossa igreja está de portas abertas para você e sua família.
-          Aqui, você encontrará um ambiente de amor, esperança e transformação.
-        </p>
-      </div>
-      <div class="w-[45%] hidden md:block">
-        <img class="w-full" src="assets/montagem_about.jpg" />
-      </div>
+
+    <div *ngIf="loading" class="text-center py-8">
+      <div
+        class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"
+      ></div>
+      <p class="text-gray-500">Carregando conteúdo...</p>
     </div>
-    <div class="w-full h-[1px] bg-blue-900 mt-20 mb-[60px]"></div>
-    <h2 class="font-semibold text-[28px] mb-4">Nossa Missão</h2>
-    <div class="text-justify leading-8 mb-10">
-      <p>
-        Nosso propósito é glorificar a Deus em tudo o que fazemos, proclamando o evangelho
-        de Jesus Cristo e vivendo de maneira que reflita Seu amor. Entendemos que a missão
-        da Igreja vai além das paredes do templo, alcançando os corações daqueles que
-        ainda não conhecem a Cristo e fortalecendo a fé daqueles que já caminham com Ele.
-      </p>
-      <p>
-        Queremos ser uma igreja relevante, que faz a diferença na vida das pessoas e na
-        sociedade, promovendo ações que gerem impacto espiritual, social e emocional.
-        Através da pregação da Palavra, do ensino sólido e de projetos comunitários,
-        buscamos ser um reflexo do amor de Deus, oferecendo apoio, aconselhamento e
-        esperança àqueles que necessitam.
-      </p>
-      <p>
-        Nosso compromisso é criar um ambiente de crescimento espiritual, onde cada pessoa
-        possa desenvolver um relacionamento profundo com Deus e descobrir seus dons e
-        talentos para servir no Reino. Juntos, queremos cumprir o chamado que Jesus nos
-        deixou: "Ide por todo o mundo e pregai o evangelho a toda criatura" (Marcos
-        16:15).
-      </p>
+
+    <div
+      *ngIf="error"
+      class="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg mb-6"
+    >
+      {{ error }}
     </div>
-    <h2 class="font-semibold text-[28px] mb-4">Nossos Valores</h2>
-    <div class="text-justify leading-8 mb-10">
-      <p>
-        1. Amar a Deus acima de todas as coisas e demonstrar esse amor através do cuidado,
-        respeito e compaixão pelo próximo.
-      </p>
-      <p>
-        2. Viver pela fé, confiando plenamente nas promessas de Deus e obedecendo à Sua
-        Palavra.
-      </p>
-      <p>
-        3. Buscar diariamente um relacionamento profundo com Deus, dedicando tempo à
-        oração e à leitura das Escrituras.
-      </p>
-      <p>
-        4. Valorizar e preservar a comunhão entre os irmãos, vivendo em harmonia,
-        edificação mútua e unidade no Corpo de Cristo.
-      </p>
-      <p>
-        5. Servir com dedicação, alegria e compromisso, utilizando nossos dons e talentos
-        para abençoar vidas e cumprir o propósito de Deus.
-      </p>
+
+    <!-- Content -->
+    <div *ngIf="!loading && !error">
+      <h2 class="font-semibold text-[28px] mb-4">Quem Somos</h2>
+      <div class="w-full flex flex-col md:flex-row gap-[60px]">
+        <div class="md:w-[50%] flex flex-col gap-3 text-justify leading-8">
+          <div [innerHTML]="getWhoWeAreContent()"></div>
+        </div>
+        <div class="w-[45%] hidden md:block">
+          <img class="w-full" src="assets/montagem_about.jpg" />
+        </div>
+      </div>
+      <div class="w-full h-[1px] bg-blue-900 mt-20 mb-[60px]"></div>
+      <h2 class="font-semibold text-[28px] mb-4">Nossa Missão</h2>
+      <div class="text-justify leading-8 mb-10">
+        <div [innerHTML]="getOurMissionContent()"></div>
+      </div>
+      <h2 class="font-semibold text-[28px] mb-4">Nossos Valores</h2>
+      <div class="text-justify leading-8 mb-10">
+        <div [innerHTML]="getOurValuesContent()"></div>
+      </div>
     </div>
   </div>
 </div>
