@@ -1,4 +1,4 @@
 [build]
-command = "ng build --configuration=production"
+command = "npm run build:prod"
 functions = "netlify/functions"
 publish = "dist/abapai-website/browser"
