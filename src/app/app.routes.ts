@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { websiteSettingsResolver } from './resolvers/website-settings.resolver';
+import { scheduleResolver } from './resolvers/schedule.resolver';
 
 export const routes: Routes = [
     {
@@ -22,6 +23,7 @@ export const routes: Routes = [
             import('./pages/schedule/schedule-page.component').then(
                 (mod) => mod.SchedulePageComponent,
             ),
+        resolve: { schedule: scheduleResolver },
     },
     {
         path: 'pedido-de-oracao',

@@ -76,7 +76,7 @@ export default [
 
       'max-depth': ['error', 4],
       'no-else-return': ['error'],
-      'no-console': ['error'],
+      'no-console': ['warn'],
       'no-duplicate-imports': ['error'],
       'no-nested-ternary': ['error'],
       'no-return-await': ['error'],

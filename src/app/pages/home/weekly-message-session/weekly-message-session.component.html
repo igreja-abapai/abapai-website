@@ -4,7 +4,7 @@
   <div class="flex flex-col justify-center">
     <h1 class="font-inter font-bold text-3xl text-black mb-3">Mensagem da semana</h1>
     <p class="font-inter font-light text-[17px] text-black mb-5">
-      A visão de quem quer milagre - Pr. Raimundo Feliciano
+      {{ title || (videoUrl ? '' : 'Carregando...') }}
     </p>
     <a href="https://www.youtube.com/@MINISTÉRIOCRISTÃOABAPAI/videos" target="_blank">
       <button
@@ -27,6 +27,7 @@
         </ng-container> -->
 
       <iframe
+        *ngIf="safeVideoUrl"
         [src]="safeVideoUrl"
         class="w-full h-full rounded-xl"
         frameborder="0"
@@ -35,7 +36,7 @@
       ></iframe>
     </div>
     <p class="font-inter font-medium text-xs text-black">
-      MINISTÉRIO CRISTÃO ABA PAI | 21 JUL 2022
+      MINISTÉRIO CRISTÃO ABA PAI | {{ date }}
     </p>
   </div>
 </div>

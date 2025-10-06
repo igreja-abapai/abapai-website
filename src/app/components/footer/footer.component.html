@@ -3,7 +3,9 @@
     <div class="flex justify-between items-start">
       <div class="hidden md:flex flex-col gap-2.5 text-sm">
         <h2 class="font-bold text-white mb-2 text-base">SOBRE NÓS</h2>
-        <p class="hover:opacity-80 hover:cursor-pointer"><a routerLink="/sobre-nos">QUEM SOMOS</a></p>
+        <p class="hover:opacity-80 hover:cursor-pointer">
+          <a routerLink="/sobre-nos">QUEM SOMOS</a>
+        </p>
         <p class="hover:opacity-80 hover:cursor-pointer">NOSSA MISSÃO</p>
         <p class="hover:opacity-80 hover:cursor-pointer">NOSSOS VALORES</p>
         <a routerLink="/programacao" class="hover:opacity-80 hover:cursor-pointer"
@@ -25,14 +27,26 @@
           class="hover:opacity-80 hover:cursor-pointer"
           >WEB-RÁDIO ABAPAI RN</a
         >
-        <a href="https://www.youtube.com/@tvabapairn" target="_blank" class="hover:opacity-80 hover:cursor-pointer">TV ABAPAI RN</a>
-        <a href="https://www.youtube.com/@MINIST%C3%89RIOCRIST%C3%83OABAPAI/streams" target="_blank" class="hover:opacity-80 hover:cursor-pointer">CULTOS GRAVADOS</a>
+        <a
+          href="https://www.youtube.com/@tvabapairn"
+          target="_blank"
+          class="hover:opacity-80 hover:cursor-pointer"
+          >TV ABAPAI RN</a
+        >
+        <a
+          href="https://www.youtube.com/@MINIST%C3%89RIOCRIST%C3%83OABAPAI/streams"
+          target="_blank"
+          class="hover:opacity-80 hover:cursor-pointer"
+          >CULTOS GRAVADOS</a
+        >
       </div>
 
       <div class="hidden md:flex flex-col gap-2.5 text-sm">
         <h2 class="font-bold text-white mb-2 text-base">MAIS</h2>
         <a routerLink="/ofertas" class="hover:opacity-80 hover:cursor-pointer">DOAÇÕES</a>
-        <p class="hover:opacity-80 hover:cursor-pointer"><a routerLink="/pedido-de-oracao">PEDIDOS DE ORAÇÃO</a></p>
+        <p class="hover:opacity-80 hover:cursor-pointer">
+          <a routerLink="/pedido-de-oracao">PEDIDOS DE ORAÇÃO</a>
+        </p>
         <p class="hover:opacity-80 hover:cursor-pointer">FALE CONOSCO</p>
       </div>
 
@@ -40,28 +54,28 @@
         <div class="flex gap-5 sm:gap-3 justify-center sm:justify-start">
           <a
             class="w-[32px] h-[32px] flex justify-center items-center bg-white rounded-2xl text-[#262425] text-lg hover:cursor-pointer transition duration-300 hover:scale-110"
-            href="https://www.facebook.com/igrejaministeriocristaoabapai"
+            [href]="getFacebookUrl()"
             target="_blank"
           >
             <fa-icon [icon]="faFacebookF"></fa-icon>
           </a>
           <a
             class="w-[32px] h-[32px] flex justify-center items-center bg-white rounded-2xl text-[#262425] text-lg hover:cursor-pointer transition duration-300 hover:scale-110"
-            href="https://www.instagram.com/igrejamcabapai"
+            [href]="getInstagramUrl()"
             target="_blank"
           >
             <fa-icon [icon]="faInstagram"></fa-icon>
           </a>
           <a
             class="w-[32px] h-[32px] flex justify-center items-center bg-white rounded-2xl text-[#262425] text-lg hover:cursor-pointer transition duration-300 hover:scale-110"
-            href="https://www.youtube.com/@MINIST%C3%89RIOCRIST%C3%83OABAPAI"
+            [href]="getYoutubeUrl()"
             target="_blank"
           >
             <fa-icon [icon]="faYoutube"></fa-icon>
           </a>
           <a
             class="w-[32px] h-[32px] flex justify-center items-center bg-white rounded-2xl text-[#262425] text-lg hover:cursor-pointer transition duration-300 hover:scale-110"
-            href="https://x.com/igrejamcabapai"
+            [href]="getTwitterUrl()"
             target="_blank"
           >
             <fa-icon [icon]="faXTwitter"></fa-icon>
@@ -71,18 +85,18 @@
         <div class="flex gap-1">
           <span class="material-symbols-outlined text-white text-xl"> location_on </span>
           <p class="max-w-[250px] text-white text-xs leading-5">
-            Rua Adail Pamplona de menezes n°38 Nova Parnamirim, Parnamirim, RN, Brazil
+            {{ getAddress() }}
           </p>
         </div>
 
         <div class="flex items-center gap-1">
           <span class="material-symbols-outlined text-white text-xl"> mail </span>
-          <p class="text-white text-xs">igrejamcabapai&#64;hotmail.com</p>
+          <p class="text-white text-xs">{{ getEmail() }}</p>
         </div>
 
         <div class="flex items-center gap-1">
           <span class="material-symbols-outlined text-white text-xl"> call </span>
-          <p class="text-white text-xs">+55 (84) 99830-5218</p>
+          <p class="text-white text-xs">{{ getPhone() }}</p>
         </div>
       </div>
     </div>
