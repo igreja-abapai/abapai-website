@@ -12,7 +12,7 @@ import { ScheduleEvent } from '../../services/schedule.service';
 })
 export class SchedulePageComponent implements OnInit {
     events: ScheduleEvent[] = [];
-    
+
     private route = inject(ActivatedRoute);
 
     ngOnInit(): void {

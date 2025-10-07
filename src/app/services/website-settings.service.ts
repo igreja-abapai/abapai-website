@@ -28,6 +28,18 @@ export interface WebsiteSettings {
     weeklyMessageUrl: string;
     weeklyMessageTitle: string;
     weeklyMessageDate: string;
+    bankInfo: {
+        bank: string;
+        agency: string;
+        account: string;
+        cnpj: string;
+        name: string;
+    };
+    pixInfo: {
+        type: string;
+        key: string;
+        name: string;
+    };
     maintenanceMode: boolean;
     createdAt: string;
     updatedAt: string;

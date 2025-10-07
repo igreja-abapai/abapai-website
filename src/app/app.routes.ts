@@ -16,6 +16,9 @@ export const routes: Routes = [
             import('./pages/donations/donations-page.component').then(
                 (mod) => mod.DonationsPageComponent,
             ),
+        resolve: {
+            websiteSettings: websiteSettingsResolver,
+        },
     },
     {
         path: 'programacao',
