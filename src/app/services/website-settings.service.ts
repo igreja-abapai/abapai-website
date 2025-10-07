@@ -20,6 +20,7 @@ export interface WebsiteSettings {
     instagram: string;
     youtube: string;
     twitter: string;
+    whatsapp: string;
     about: string;
     serviceTimes: string;
     aboutWhoWeAre: string;

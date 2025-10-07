@@ -1,25 +1,59 @@
-<swiper-container
-  style="
-    --swiper-navigation-color: #fff;
-    --swiper-navigation-size: 25px;
-    --swiper-navigation-sides-offset: 25px;
-  "
-  loop="true"
-  navigation="true"
-  pagination="true"
-  autoplay-delay="6000"
-  autoplay-disable-on-interaction="false"
->
-  <swiper-slide>
-    <div
-      class="slider-item"
-      style="background-image: url('assets/capa_welcome_wide.jpg')"
-    ></div>
-  </swiper-slide>
-  <swiper-slide>
-    <div
-      class="slider-item"
-      style="background-image: url('assets/tvabapaibanner2.jpg')"
-    ></div>
-  </swiper-slide>
-</swiper-container>
+<div>
+  <div *ngIf="loading" class="text-center py-8">
+    <p>Carregando carrossel...</p>
+  </div>
+
+  <div *ngIf="error" class="text-center py-8 text-red-600">
+    <p>{{ error }}</p>
+  </div>
+
+  <swiper-container
+    *ngIf="!loading && !error"
+    style="
+      --swiper-navigation-color: #fff;
+      --swiper-navigation-size: 25px;
+      --swiper-navigation-sides-offset: 25px;
+    "
+    loop="true"
+    navigation="true"
+    pagination="true"
+    autoplay-delay="6000"
+    autoplay-disable-on-interaction="false"
+    allow-touch-move="true"
+    touch-start-prevent-default="false"
+  >
+    <swiper-slide *ngFor="let image of images; let i = index">
+      <div
+        class="slider-item"
+        [style.background-image]="'url(' + image.imageUrl + ')'"
+        [class.cursor-pointer]="image.linkUrl"
+        (mousedown)="onImageMouseDown(image, $event)"
+        (mouseup)="onImageMouseUp(image, $event)"
+        (touchstart)="onImageTouchStart(image, $event)"
+        (touchend)="onImageTouchEnd(image, $event)"
+      ></div>
+    </swiper-slide>
+  </swiper-container>
+
+  <!-- Fallback to static images if no dynamic images are available -->
+  <swiper-container
+    *ngIf="!loading && !error && images.length === 0"
+    style="
+      --swiper-navigation-color: #fff;
+      --swiper-navigation-size: 25px;
+      --swiper-navigation-sides-offset: 25px;
+    "
+    loop="true"
+    navigation="true"
+    pagination="true"
+    autoplay-delay="6000"
+    autoplay-disable-on-interaction="false"
+  >
+    <swiper-slide>
+      <div
+        class="slider-item"
+        style="background-image: url('assets/capa_welcome_wide.jpg')"
+      ></div>
+    </swiper-slide>
+  </swiper-container>
+</div>

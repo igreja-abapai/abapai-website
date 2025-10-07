@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { websiteSettingsResolver } from './resolvers/website-settings.resolver';
 import { scheduleResolver } from './resolvers/schedule.resolver';
+import { carouselResolver } from './resolvers/carousel.resolver';
 
 export const routes: Routes = [
     {
@@ -9,6 +10,9 @@ export const routes: Routes = [
             import('./pages/home/home-page.component').then(
                 (mod) => mod.HomePageComponent,
             ),
+        resolve: {
+            carouselImages: carouselResolver,
+        },
     },
     {
         path: 'ofertas',
