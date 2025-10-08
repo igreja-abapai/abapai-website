@@ -25,8 +25,15 @@ export class AboutPageComponent implements OnInit {
     error: string | null = null;
 
     ngOnInit() {
-        // Always fetch fresh content on client-side for dynamic updates
-        this.loadWebsiteSettings();
+        // Check if data was already loaded during SSR
+        const resolvedData = this.route.snapshot.data['websiteSettings'];
+        if (resolvedData) {
+            this.websiteSettings = resolvedData;
+            this.loading = false;
+        } else {
+            // Fallback to client-side loading if SSR didn't work
+            this.loadWebsiteSettings();
+        }
     }
 
     private loadWebsiteSettings() {
