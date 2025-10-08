@@ -2,3 +2,8 @@
 command = "npm run build:prod"
 functions = "netlify/functions"
 publish = "dist/abapai-website/browser"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=600" # 10 minutes cache (600 seconds)
