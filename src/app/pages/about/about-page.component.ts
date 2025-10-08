@@ -21,19 +21,12 @@ export class AboutPageComponent implements OnInit {
     websiteSettings: WebsiteSettings | null = null;
 
     loading = true;
-    
+
     error: string | null = null;
 
     ngOnInit() {
-        // Check if data was already loaded during SSR
-        const resolvedData = this.route.snapshot.data['websiteSettings'];
-        if (resolvedData) {
-            this.websiteSettings = resolvedData;
-            this.loading = false;
-        } else {
-            // Fallback to client-side loading if SSR didn't work
-            this.loadWebsiteSettings();
-        }
+        // Always fetch fresh content on client-side for dynamic updates
+        this.loadWebsiteSettings();
     }
 
     private loadWebsiteSettings() {
@@ -52,23 +45,14 @@ export class AboutPageComponent implements OnInit {
 
     // Fallback content methods
     getWhoWeAreContent(): string {
-        return (
-            this.websiteSettings?.aboutWhoWeAre ||
-            ''
-        );
+        return this.websiteSettings?.aboutWhoWeAre || '';
     }
 
     getOurMissionContent(): string {
-        return (
-            this.websiteSettings?.aboutOurMission ||
-            ''
-        );
+        return this.websiteSettings?.aboutOurMission || '';
     }
 
     getOurValuesContent(): string {
-        return (
-            this.websiteSettings?.aboutOurValues ||
-            ''
-        );
+        return this.websiteSettings?.aboutOurValues || '';
     }
 }

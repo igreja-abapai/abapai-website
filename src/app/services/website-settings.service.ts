@@ -81,7 +81,13 @@ export class WebsiteSettingsService {
 
         // If not cached, fetch from API. On the server, store into TransferState.
         this.settings$ = this.http
-            .get<WebsiteSettings>(`${this.apiUrl}/website/settings`)
+            .get<WebsiteSettings>(`${this.apiUrl}/website/settings`, {
+                headers: {
+                    'Cache-Control': 'no-cache, no-store, must-revalidate',
+                    Pragma: 'no-cache',
+                    Expires: '0',
+                },
+            })
             .pipe(
                 tap((settings) => {
                     if (isPlatformServer(this.platformId)) {
