@@ -44,7 +44,7 @@ export class AboutPageComponent implements OnInit {
             },
             error: (err) => {
                 console.error('Error loading website settings:', err);
-                this.error = 'Erro ao carregar conteúdo da página';
+                this.websiteSettings = null;
                 this.loading = false;
             },
         });

@@ -7,8 +7,9 @@
     <p>{{ error }}</p>
   </div>
 
+  <!-- Show dynamic images if available -->
   <swiper-container
-    *ngIf="!loading && !error"
+    *ngIf="!loading && !error && images.length > 0"
     style="
       --swiper-navigation-color: #fff;
       --swiper-navigation-size: 25px;

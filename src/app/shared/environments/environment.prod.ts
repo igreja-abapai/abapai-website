@@ -1,4 +1,5 @@
 export const environment = {
     prod: true,
-    clientApiBaseUrl: 'https://abapai-api.vercel.app',
+    clientApiBaseUrl: 'http://localhost:4333',
+    // clientApiBaseUrl: 'https://abapai-api.vercel.app',
 };

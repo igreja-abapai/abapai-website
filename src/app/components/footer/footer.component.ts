@@ -49,22 +49,27 @@ export class FooterComponent implements OnInit {
             },
             error: (error) => {
                 console.error('Error loading website settings:', error);
-                this.error = 'Erro ao carregar informações do site';
+                // Use fallback data instead of showing error
+                // The getter methods already have fallback logic
+                this.websiteSettings = null;
                 this.loading = false;
             },
         });
     }
 
     getAddress(): string {
-        return this.websiteSettings?.address || '';
+        return (
+            this.websiteSettings?.address ||
+            'Rua Adail Pamplona de menezes n°38 Nova Parnamirim, Parnamirim, RN, Brazil'
+        );
     }
 
     getEmail(): string {
-        return this.websiteSettings?.email || '';
+        return this.websiteSettings?.email || 'igrejamcabapai@hotmail.com';
     }
 
     getPhone(): string {
-        return this.websiteSettings?.phone || '';
+        return this.websiteSettings?.phone || '+55 (84) 99830-5218';
     }
 
     getFacebookUrl(): string {

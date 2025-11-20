@@ -1,7 +1,7 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { CarouselImage } from '../../../services/carousel.service';
+import { CarouselImage, CarouselService } from '../../../services/carousel.service';
 
 @Component({
     selector: 'app-carousel',
@@ -20,6 +20,8 @@ export class CarouselComponent implements OnInit {
 
     private route = inject(ActivatedRoute);
 
+    private carouselService = inject(CarouselService);
+
     private dragStartTime = 0;
 
     private dragStartX = 0;
@@ -33,8 +35,8 @@ export class CarouselComponent implements OnInit {
         const resolved = this.route.snapshot.data['carouselImages'] as
             | CarouselImage[]
             | undefined;
-        if (resolved) {
-            this.images = resolved;
+        if (resolved !== undefined) {
+            this.images = resolved || [];
             this.loading = false;
         } else {
             this.loadCarouselImages();
@@ -42,9 +44,18 @@ export class CarouselComponent implements OnInit {
     }
 
     private loadCarouselImages(): void {
-        // This would be used if no SSR data is available
-        // For now, we'll use the resolved data
-        this.loading = false;
+        this.carouselService.getImages().subscribe({
+            next: (images) => {
+                this.images = images || [];
+                this.loading = false;
+            },
+            error: (err) => {
+                console.error('Error loading carousel images:', err);
+                // Set empty array to show fallback image
+                this.images = [];
+                this.loading = false;
+            },
+        });
     }
 
     onImageMouseDown(image: CarouselImage, event: MouseEvent): void {

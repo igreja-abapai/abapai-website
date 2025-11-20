@@ -45,7 +45,9 @@ export class DonationsPageComponent implements OnInit {
             },
             error: (err) => {
                 console.error('Error loading website settings:', err);
-                this.error = 'Erro ao carregar informações';
+                // Use fallback data instead of showing error
+                // The getBankInfo() and getPixInfo() methods already have fallback logic
+                this.websiteSettings = null;
                 this.loading = false;
             },
         });
