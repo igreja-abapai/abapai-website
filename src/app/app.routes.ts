@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { websiteSettingsResolver } from './resolvers/website-settings.resolver';
 import { scheduleResolver } from './resolvers/schedule.resolver';
 import { carouselResolver } from './resolvers/carousel.resolver';
+import { liveResolver } from './resolvers/live.resolver';
 
 export const routes: Routes = [
     {
@@ -38,6 +39,12 @@ export const routes: Routes = [
             import('./pages/prayer/prayer-page.component').then(
                 (mod) => mod.PrayerPageComponent,
             ),
+    },
+    {
+        path: 'ao-vivo',
+        loadComponent: () =>
+            import('./pages/live/live-page.component').then((mod) => mod.LivePageComponent),
+        resolve: { live: liveResolver },
     },
     {
         path: 'sobre-nos',
